@@ -17,5 +17,3 @@ chmod 0644 ${ocpath}/.htaccess
 
 chown -R root:${htuser} /usr/share/owncloud/
 chown -R ${htuser}:${htgroup} /usr/share/owncloud/data/
-chown root:${htuser} /usr/share/owncloud/data/.htaccess
-chmod 0644 /usr/share/owncloud/data/.htaccess
