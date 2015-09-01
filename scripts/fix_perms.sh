@@ -3,6 +3,7 @@
 ocpath='/usr/share/nginx/html/owncloud'
 htuser='www-data'
 htgroup='www-data'
+
 find ${ocpath}/ -type f -print0 | xargs -0 chmod 0640
 find ${ocpath}/ -type d -print0 | xargs -0 chmod 0750
 chown -R root:${htuser} ${ocpath}/

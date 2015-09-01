@@ -1,6 +1,4 @@
 #!/bin/bash
-#This script only runs once to install and configure ownCloud
-#Then it deletes itself.
 
 # Set timezone
 if [ ! -z "$OC_TZ" ]; then
