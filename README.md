@@ -24,4 +24,4 @@ Where
 * <code> OC_DB_NAME </code> is ownCloud database name. It will be created automatically if it doesn't exists.
 * <code> OC_TZ </code> timezone file as in <code>/usr/share/zoneinfo</code>. For example <code>-e OC_TZ=Europe/Istanbul</code> will set the container time to Istanbul. This is optional and can be omitted.
 * <code> OC_SERVER_NAME </code> is the domain name of your server. If omitted <code> localhost </code> will be used.
-* <code> /path/to/ssl/crt </code> is where you put your ssl key and certificate. If you don't mount this volume, a key and a cerfiticate will be automatically generated.
+* <code> /path/to/ssl/crt </code> is where you put your SSL key and certificate. If you don't mount this volume, a key and a cerfiticate will be automatically generated.
