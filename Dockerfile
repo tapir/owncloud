@@ -37,7 +37,6 @@ RUN mkdir /usr/share/nginx/html/owncloud/assets
 RUN mkdir /usr/share/nginx/html/owncloud/logs
 RUN mkdir /var/lib/owncloud
 RUN chown -Rf www-data:www-data /var/lib/owncloud
-RUN chmod -Rf 0750 /var/lib/owncloud
 RUN chown -Rf www-data:www-data /usr/share/nginx/html/owncloud
 COPY configs/htaccess /usr/share/nginx/html/owncloud/.htaccess
 

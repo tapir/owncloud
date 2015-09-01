@@ -11,6 +11,7 @@ chown -R ${htuser}:${htgroup} ${ocpath}/apps/
 chown -R ${htuser}:${htgroup} ${ocpath}/config/
 chown -R ${htuser}:${htgroup} ${ocpath}/themes/
 chown -R ${htuser}:${htgroup} ${ocpath}/assets/
-chown -R ${htuser}:${htgroup} ${ocpath}/logs/
+chown -R ${htuser}:${htgroup} /${ocpath}/logs/
+chown -R ${htuser}:${htgroup} /var/lib/owncloud/data/
 chown root:${htuser} ${ocpath}/.htaccess
 chmod 0644 ${ocpath}/.htaccess
