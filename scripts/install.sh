@@ -47,7 +47,8 @@ sudo -u www-data php occ maintenance:install \
 --database-pass ${MARIADB_ENV_MYSQL_ROOT_PASSWORD} \
 --database-host mariadb \
 --admin-user ${OC_ADMIN_USER} \
---admin-pass ${OC_ADMIN_PASS} && \
+--admin-pass ${OC_ADMIN_PASS} \
+--data-dir "/usr/share/owncloud/data" && \
 
 # Configure ownCloud
 sudo -u www-data php occ background:cron && \

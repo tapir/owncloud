@@ -7,7 +7,8 @@ CMD ["/start.sh"]
 # Install necessary packages (php5-apcu from Trusty repos doesn't work)
 RUN apt-get update -y && apt-get install -y \
 supervisor cron sudo bzip2 nginx wget php5-apcu php5-ldap php5-cli \
-php5-fpm php5-mysql php5-gd php5-mcrypt php5-json php5-curl php5-intl
+php5-fpm php5-mysql php5-gd php5-mcrypt php5-json php5-curl php5-intl \
+pgp5-imagick php5-imap php5-pgsql php5-gmp
 
 # Copy configs and scripts
 COPY configs/php.ini.fpm /etc/php5/fpm/php.ini
@@ -34,8 +35,10 @@ RUN rm -f owncloud-8.1.1.tar.bz2
 RUN rm -Rf /usr/share/nginx/html/owncloud/core/skeleton/*
 RUN mkdir /usr/share/nginx/html/owncloud/assets
 RUN mkdir /usr/share/nginx/html/owncloud/logs
-COPY configs/htaccess /usr/share/nginx/html/owncloud/.htaccess
+RUN mkdir /usr/share/owncloud
 RUN chown -Rf www-data:www-data /usr/share/nginx/html/owncloud
+RUN chown -Rf www-data:www-data /usr/share/owncloud
+COPY configs/htaccess /usr/share/nginx/html/owncloud/.htaccess
 
 # Clean up APT when done.
 RUN apt-get remove --purge -y wget bzip2
