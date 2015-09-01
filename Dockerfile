@@ -35,9 +35,10 @@ RUN rm -f owncloud-8.1.1.tar.bz2
 RUN rm -Rf /usr/share/nginx/html/owncloud/core/skeleton/*
 RUN mkdir /usr/share/nginx/html/owncloud/assets
 RUN mkdir /usr/share/nginx/html/owncloud/logs
-RUN mkdir /usr/share/owncloud
+RUN mkdir /var/lib/owncloud
+RUN chown -Rf www-data:www-data /var/lib/owncloud
+RUN chmod -Rf 0750 /var/lib/owncloud
 RUN chown -Rf www-data:www-data /usr/share/nginx/html/owncloud
-RUN chown -Rf www-data:www-data /usr/share/owncloud
 COPY configs/htaccess /usr/share/nginx/html/owncloud/.htaccess
 
 # Clean up APT when done.

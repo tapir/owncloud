@@ -14,6 +14,3 @@ chown -R ${htuser}:${htgroup} ${ocpath}/assets/
 chown -R ${htuser}:${htgroup} ${ocpath}/logs/
 chown root:${htuser} ${ocpath}/.htaccess
 chmod 0644 ${ocpath}/.htaccess
-
-chown -R root:${htuser} /usr/share/owncloud/
-chown -R ${htuser}:${htgroup} /usr/share/owncloud/data/
