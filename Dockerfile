@@ -8,7 +8,7 @@ CMD ["/start.sh"]
 RUN apt-get update -y && apt-get install -y \
 supervisor cron sudo bzip2 nginx wget php5-apcu php5-ldap php5-cli \
 php5-fpm php5-mysql php5-gd php5-mcrypt php5-json php5-curl php5-intl \
-pgp5-imagick php5-imap php5-pgsql php5-gmp
+php5-imagick php5-imap php5-pgsql php5-gmp
 
 # Copy configs and scripts
 COPY configs/php.ini.fpm /etc/php5/fpm/php.ini
