@@ -1,7 +1,7 @@
 FROM ubuntu:vivid
+
 MAINTAINER Cosku Bas <cosku.bas@gmail.com>
 
-# Use baseimage-docker's init system.
 CMD ["/start.sh"]
 
 # Install necessary packages (php5-apcu from Trusty repos doesn't work)
