@@ -1,3 +1,5 @@
+# What is it?
+This is an ownCloud image based on Ubuntu 15.04, nginx, php5-fpm and configured for speed and security.
 # Usage
 Create data folders for permanent storage
 ```
