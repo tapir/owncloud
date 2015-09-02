@@ -8,16 +8,21 @@ mkdir /path/to/my/mysql_data
 Create data folders for permanent storage
 
 ```bash
-docker run --name mariadb -e MYSQL_ROOT_PASSWORD=some_password \
+docker run --name db_container_name -e MYSQL_ROOT_PASSWORD=some_password \
 -v /path/to/my/mysql_data:/var/lib/mysql -d mariadb
 ```
 Run a MySQL/MariaDB container
 
 ```bash
-docker run --name owncloud -i -p 80:80 -p 443:443 -e OC_ADMIN_USER=username \
--e OC_ADMIN_PASS=password -e OC_DB_NAME=dbname -e OC_TZ=timezone \
--e OC_SERVER_NAME=somename.com -v /path/to/ssl/crt:/etc/ssl/nginx \
--v /path/to/my/owncloud_data:/var/lib/owncloud --link mariadb -d tapir/owncloud
+docker run --name oc_container_name -i -p 80:80 -p 443:443 \
+-e OC_ADMIN_USER=username \
+-e OC_ADMIN_PASS=password \
+-e OC_DB_NAME=dbname \
+-e OC_TZ=timezone \
+-e OC_SERVER_NAME=somename.com \
+-v /path/to/ssl/crt:/etc/ssl/nginx \
+-v /path/to/my/owncloud_data:/var/lib/owncloud \
+--link db_container_name:mariadb -d tapir/owncloud
 ```
 Run the ownCloud container
 ### Variables
