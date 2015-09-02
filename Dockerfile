@@ -4,7 +4,7 @@ MAINTAINER Cosku Bas <cosku.bas@gmail.com>
 
 CMD ["/start.sh"]
 
-# Install necessary packages (php5-apcu from Trusty repos doesn't work)
+# Install necessary packages
 RUN apt-get update -y && apt-get install -y \
 supervisor cron sudo bzip2 nginx wget php5-apcu php5-ldap php5-cli \
 php5-fpm php5-mysql php5-gd php5-mcrypt php5-json php5-curl php5-intl \
