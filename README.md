@@ -27,4 +27,4 @@ Where
 * ` OC_DB_NAME ` is ownCloud database name. It will be created automatically if it doesn't exists.
 * ` OC_TZ ` timezone file as in `/usr/share/zoneinfo`. For example `-e OC_TZ=Europe/Istanbul` will set the container time to Istanbul. This is optional and can be omitted.
 * ` OC_SERVER_NAME ` is the domain name of your server. If omitted ` localhost ` will be used.
-* ` /path/to/ssl/crt ` is where you put your SSL key and certificate. If you don't mount this volume, a key and a cerfiticate will be automatically generated.
+* ` /path/to/ssl/crt ` is where you put your SSL key and certificate. If you don't mount this volume, a key and a cerfiticate will be automatically generated. The files should be names as `nginx.key`and `nginx.crt`.
